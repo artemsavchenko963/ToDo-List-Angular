@@ -1,0 +1,30 @@
+<div class="todo-wrapper">
+  <h2>TODO List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="newTodoTitle"
+    placeholder="Enter the task"
+  />
+
+  <button (click)="addTodo()">Add task</button>
+
+  <ul>
+    <li
+      *ngFor="let todo of todos$ | async; trackBy: trackById"
+      [class.done]="todo.completed"
+      appHighlight
+    >
+      <span (click)="toggle(todo)">
+        {{ todo.title }}
+      </span>
+
+      <button (click)="remove(todo.id)">Delete</button>
+    </li>
+  </ul>
+
+  <p *ngIf="(todos$ | async)?.length === 0">
+    There are no tasks..
+  </p>
+</div>
+

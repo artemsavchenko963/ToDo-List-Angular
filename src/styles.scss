@@ -1,0 +1,107 @@
+* {
+    font-weight: bolder;
+}
+.todo-wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg,  #2b4251, #91b3bc);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-family: cursive;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.todo-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.todo-wrapper input {
+    color: rgb(255, 255, 255);
+    width: calc(100% - 20px);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    font-family: cursive;
+}
+
+.todo-wrapper input:focus {
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.todo-wrapper button {
+    padding: 10px 20px;
+    background: #91b3bc;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: cursive;
+
+}
+
+.todo-wrapper button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px #ffffff;
+}
+
+/* Список задач */
+.todo-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.todo-wrapper li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.todo-wrapper li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-wrapper li.done span {
+    text-decoration: line-through;
+    color: #99a6a7;
+    cursor: default;
+}
+
+/* Кнопка удаления */
+.todo-wrapper li button {
+    background: #91b3bc;
+     border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.todo-wrapper li button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px #ffffff;
+}
+
+/* Сообщение о пустом списке */
+.todo-wrapper p {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #ddd;
+}
+
